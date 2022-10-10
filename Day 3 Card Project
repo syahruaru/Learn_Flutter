@@ -1,0 +1,83 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+              // crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 50.0,
+                  // Fit image using ClipOval
+                  // backgroundColor: Colors.transparent,
+                  // child: ClipOval(
+                  //     child: Image.asset(
+                  //   "images/Syahru.jpg",
+                  //   fit: BoxFit.cover,
+                  backgroundImage: AssetImage('images/images.jpg'),
+                ),
+                Text(
+                  'Name ',
+                  style: TextStyle(
+                      fontFamily: 'Lexend Deca',
+                      fontSize: 30.0,
+                      color: Colors.white),
+                ),
+                Text(
+                  'Ministry of Research and Technology',
+                  style: TextStyle(
+                      fontFamily: 'Bitter', fontSize: 15, color: Colors.white),
+                ),
+                SizedBox(
+                    height: 20.0,
+                    width: 150.0,
+                    child: Divider(
+                      color: Colors.white,
+                    )),
+                Card(
+                    color: Colors.teal.shade700,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.whatsapp,
+                        size: 50.0,
+                        color: Colors.white,
+                      ),
+                      title: Text("+62 812 xxxx xxxx",
+                          style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              fontSize: 20,
+                              color: Colors.white)),
+                    )),
+                Card(
+                    color: Colors.teal.shade700,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        size: 50,
+                        color: Colors.white,
+                      ),
+                      title: Text("xxxxxxx@gmail.com",
+                          style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              fontSize: 20,
+                              color: Colors.white)),
+                    ))
+              ]),
+        ),
+      ),
+    );
+  }
+}
